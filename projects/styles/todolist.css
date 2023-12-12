@@ -1,0 +1,62 @@
+body{
+  font-family: 'Alexandria', sans-serif;
+  background-image: url(images/cuadricula.jpg);
+}
+
+.titulo{
+  margin-top: 50px;
+  font-size: 35px;
+}
+
+
+.todo-input-grid{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.todo-input-grid input,
+.todo-input-grid select,
+.todo-input-grid button {
+  margin: 6px;
+  padding: 10px;
+  font-size: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.todo-input-grid button{
+  background-color: blue;
+  color: white;
+  width: 100px;
+  cursor: pointer;
+}
+
+.todo-input-grid select,
+.todo-input-grid input{
+  background-color: antiquewhite;
+}
+.todo-priority-grid {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.todo-priority-grid > div {
+  flex: 1;
+  margin: 0 5px;
+  box-sizing: border-box;
+  text-align: center;
+  border-right: 1px solid #141414;
+}
+
+.delete-todo-button {
+  background-color: rgb(110, 2, 2);
+  color: white;
+  border: none;
+  font-size: 15px;
+  cursor: pointer;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

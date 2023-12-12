@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="styles/calculadora.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&family=Ubuntu&family=Ultra&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="container">
+      <div class="calculadora">
+        <form>
+          <div class="display">
+            <input type="text" name="display">
+          </div>
+          <div>
+            <input  type="button" class="rojo"value="AC"
+            onclick=
+              "display.value = ''">
+
+            <input class="rojo" type="button" value="DE"
+            onclick=
+              "display.value = display.value.toString().slice(0,-1)"
+            onkeydown=
+              "(event.key === backspace);{display.value.toString().slice(0,-1)}">
+
+            <input type="button" class="porcentaje" value="%"
+            onclick=
+              "display.value += '%'"
+            onkeydown=
+              "(event.key === '%');{display.value += '%'}">
+
+            <input type="button" value="/"
+            onclick=
+              "display.value += '/'"
+            onkeydown=
+              "(event.key === '/');{display.value += '/>'}">
+          </div>
+          <div>
+            <input type="button" value="7" class="numero"
+            onclick=
+              "display.value += '7'"
+            onkeydown=
+              "(event.key === 7);{display.value += '7'}">
+
+            <input type="button" value="8" class="numero"
+            onclick=
+              "display.value += '8'"
+            onkeydown=
+              "(event.key === 8);{display.value += '8'}">
+
+            <input type="button" value="9" class="numero"
+            onclick=
+              "display.value += '9'"
+            onkeydown=
+              "(event.key === 9);{display.value += '9'}">
+
+            <input type="button" value="*"
+            onclick=
+              "display.value += '*'"
+            onkeydown=
+              "(event.key === '*');{display.value += '*'}"
+            >
+          </div>
+          <div>
+            <input type="button" value="4" class="numero"
+            onclick=
+              "display.value += '4'"
+            onkeydown=
+              "(event.key === 4);{display.value += '4'}">
+
+            <input type="button" value="5" class="numero"
+            onclick=
+              "display.value += '5'"
+            onkeydown=
+              "(event.key === 5);{display.value += '5'}">
+
+            <input type="button" value="6" class="numero"
+            onclick=
+              "display.value += '6';"
+            onkeydown=
+              "(event.key === 6);{display.value += '6'}">
+
+            <input type="button" value="-"
+            onclick=
+              "display.value += '-'"
+            onkeydown=
+              "(event.key === '-');{display.value += '-'}">
+          </div>
+          <div>
+            <input type="button" value="1" class="numero"
+            onclick=
+              "display.value += '1'"
+            onkeydown=
+              "(event.key === 1);{display.value += '1'}">
+
+            <input type="button" value="2" class="numero"
+            onclick=
+              "display.value += '2'"
+            onkeydown=
+              "(event.key === 2);{display.value += '2'}">
+
+            <input type="button" value="3" class="numero"
+            onclick=
+              "display.value += '3'"
+            onkeydown=
+              "(event.key === 3);{display.value += '3'}">
+
+            <input type="button" value="+"
+            onclick=
+              "display.value += '+'"
+            onkeydown=
+              "(event.key === '+');{display.value += '+'}">
+          </div>
+          <div>
+            <input type="button" value="."
+            onclick=
+              "display.value += '.'"
+            onkeydown=
+              "(event.key === '.');{display.value += '.'}">
+
+            <input type="button" value="0"
+            onclick=
+            "display.value += '0'"
+            onkeydown=
+            "(event.key === 0);{display.value += '0'}">
+
+            <input type="button" value="=" class="igual" onclick="calcular()">
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+      function calcular() {
+        const display = document.querySelector('input[name="display"]');
+        const expresion = display.value;
+
+        try {
+          const resultado = eval(expresion);
+          display.value = resultado;
+        } catch (error) {
+          display.value = 'Error';
+        }
+      }
+
+    </script>
+  </body>
+</html>

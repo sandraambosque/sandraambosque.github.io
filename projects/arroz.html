@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Cocción de Arroz</title>
+    <link rel="stylesheet" href="styles/arroz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&family=Sofia+Sans:wght@700&family=Space+Mono:wght@700&family=Ubuntu&family=Ultra&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Calculadora de Cocción de Arroz</h1>
+    <label for="variedadArroz">Selecciona la variedad de arroz:</label>
+    <select id="variedadArroz">
+        <option value="arrozRedondo">Arroz Redondo</option>
+        <option value="arrozIntegral">Arroz Integral</option>
+        <option value="arrozJazmin">Arroz Jazmín</option>
+        <option value="arrozBomba">Arroz Bomba</option>
+        <option value="arrozBasmati">Arroz Basmati</option>
+        <option value="arrozArborio">Arroz Arborio</option>
+        <option value="arrozSushi">Arroz Sushi</option>
+        <option value="arrozSalvaje">Arroz Salvaje</option>
+        <option value="arrozRojo">Arroz Rojo</option>
+        <option value="arrozVaporizado">Arroz Vaporizado</option>
+    </select>
+
+    <br>
+
+    <label for="cantidadGramos">Introduce la cantidad en gramos:</label>
+    <input type="number" id="cantidadGramos" min="1" required>
+
+    <br>
+
+    <button onclick="calcularCoccion()">CALCULAR</button>
+
+    <br>
+
+    <p>Cantidad de agua necesaria: <span id="resultadoAgua"></span> ml</p>
+    <p>Tiempo aproximado de cocción: <span id="resultadoTiempo"></span> minutos</p>
+
+    <br>
+
+    <script>
+        function calcularCoccion() {
+            let variedadArroz = document.getElementById("variedadArroz").value;
+            let cantidadGramos = parseFloat(document.getElementById("cantidadGramos").value);
+
+            if (isNaN(cantidadGramos)) {
+                alert("Debes introducir una cantidad de gramos para continuar.");
+                return;
+            }
+
+            let aguaNecesaria, tiempoCoccion;
+
+            switch (variedadArroz) {
+                case "arrozRedondo":
+                    aguaNecesaria = cantidadGramos * 2;
+                    tiempoCoccion = cantidadGramos / 5;
+                    break;
+                case "arrozIntegral":
+                    aguaNecesaria = cantidadGramos * 3;
+                    tiempoCoccion = cantidadGramos / 6.22;
+                    break;
+                case "arrozJazmin":
+                    aguaNecesaria = cantidadGramos * 1.25;
+                    tiempoCoccion = cantidadGramos / 13.25;
+                    break;
+                case "arrozBomba":
+                    aguaNecesaria = cantidadGramos * 3;
+                    tiempoCoccion = cantidadGramos / 5;
+                    break;
+                case "arrozBasmati":
+                    aguaNecesaria = cantidadGramos * 2.5;
+                    tiempoCoccion = cantidadGramos / 10;
+                    break;
+                case "arrozArborio":
+                    aguaNecesaria = cantidadGramos * 2;
+                    tiempoCoccion = cantidadGramos / 5;
+                    break;
+                case "arrozSushi":
+                    aguaNecesaria = cantidadGramos * 1;
+                    tiempoCoccion = cantidadGramos / 7.14;
+                    break;
+                case "arrozSalvaje":
+                    aguaNecesaria = cantidadGramos * 3;
+                    tiempoCoccion = cantidadGramos / 2.5;
+                    break;
+                case "arrozRojo":
+                    aguaNecesaria = cantidadGramos * 3;
+                    tiempoCoccion = cantidadGramos / 2.27;
+                    break;
+                case "arrozVaporizado":
+                    aguaNecesaria = cantidadGramos * 2.25;
+                    tiempoCoccion = cantidadGramos / 4;
+                    break;
+            }
+
+            document.getElementById("resultadoAgua").textContent = aguaNecesaria.toFixed(2);
+            document.getElementById("resultadoTiempo").textContent = tiempoCoccion.toFixed(2);
+        }
+    </script>
+</body>
+</html>

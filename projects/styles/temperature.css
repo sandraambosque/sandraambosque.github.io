@@ -1,0 +1,79 @@
+body {
+  background-image: url(images/nubes.jpeg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  font-family: 'Alexandria', sans-serif;
+}
+
+.container {
+  max-width: 400px;
+  padding: 20px;
+  background-color: #3c499f;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#tempInput{
+  background-color: antiquewhite;
+  font-family: 'Alexandria', sans-serif;
+  margin-top: 10px;
+}
+
+label{
+  color: #E6BF40;
+  font-size: large;
+  font-family: 'Alexandria', sans-serif;
+
+}
+h1 {
+  color: #E6BF40;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+#conversionType{
+  font-family: 'Alexandria', sans-serif;
+}
+input[type="number"] {
+  width: 150px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select {
+  width: 200px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #E6BF40;
+  color: #4056E6;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Alexandria', sans-serif;
+  font-size: large;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #99780C;
+}
+
+#result {
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-top: 20px;
+}

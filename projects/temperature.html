@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/temperature.css">
+    <title>Conversor de Temperatura</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600&family=Quicksand:wght@600&family=Sofia+Sans:wght@700&family=Space+Mono:wght@700&family=Ubuntu&family=Ultra&family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Temperatura</h1>
+        <label for="tempInput">Ingrese la temperatura:</label>
+        <input type="number" id="tempInput" placeholder="Ingrese un valor">
+        <select id="conversionType">
+            <option value="celsiusToFahrenheit">Celsius a Fahrenheit</option>
+            <option value="fahrenheitToCelsius">Fahrenheit a Celsius</option>
+        </select>
+        <button id="convertButton">Convertir</button>
+        <p id="result"></p>
+    </div>
+    <script src="scripts/temperature.js"></script>
+</body>
+</html>

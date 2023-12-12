@@ -1,0 +1,73 @@
+
+body {
+  font-family: 'Quicksand', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+  flex-direction: column;
+  background-image: url(images/campoarroz.jpg);
+  color: #282418;
+}
+
+h1 {
+  color: #ba953c;
+}
+
+
+label, input, select {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  max-width: 100%;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 25px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+
+button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  background-color: #692905;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: 'Quicksand', sans-serif;
+  border-radius: 5px;
+  width: 150px;
+  height: 50px;
+  font-size: large;
+}
+
+button:hover {
+  background-color: rgb(125, 118, 109);
+  color: #081E35;
+}
+
+
+p {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: x-large;
+}
+
+span {
+  color: #1d6211;
+  text-decoration: underline;
+  font-size: xx-large;
+}
+
+/* Estilo para el contenedor principal */
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+}

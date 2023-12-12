@@ -1,0 +1,51 @@
+body {
+  background-color: #961313;
+  background-attachment: fixed;
+  color: rgb(255, 255, 255);
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  margin-top: 80px;
+  display: flexbox;
+}
+
+.titulo {
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.icono-movimiento {
+  height: 80px;
+}
+
+.button-movimiento {
+  background-color: white;
+  border: 3px solid #141414;
+  width: 150px;
+  height: 150px;
+  border-radius: 80px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.resultado {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 40px;
+  color: #ffffff;
+}
+
+.puntuacion {
+  margin-top: 40px;
+}
+
+.button-reiniciar-puntuacion,
+.auto-play-button {
+  background-color: #2f0202;
+  border: none;
+  border-radius: 15px;
+  font-size: 35px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-family: 'Ubuntu', sans-serif;
+  color: rgb(255, 255, 255);
+}

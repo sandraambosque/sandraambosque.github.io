@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TAREAS</title>
+    <link rel="stylesheet" href="styles/todolist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@600&family=Quicksand:wght@600&family=Sofia+Sans:wght@700&family=Space+Mono:wght@700&family=Ubuntu&family=Ultra&display=swap" rel="stylesheet">
+
+  </head>
+  <body>
+    <p class="titulo" align="center">TAREAS</p>
+
+    <div class="todo-input-grid">
+      <input placeholder="Escribe aqui una tarea" class="js-name-input name-input">
+      <input type="date" class="js-due-date-input due-date-input">
+      <select class="js-priority-select priority-select">
+        <option value="alta">Alta</option>
+        <option value="media">Media</option>
+        <option value="baja">Baja</option>
+      </select>
+      <button class="add-todo-button js-add-todo-button">Añadir</button>
+    </div>
+
+    <div class="todo-priority-grid">
+      <div class="priority-column">
+        <h2><font color="red">Alta Prioridad</font></h2>
+        <div class="js-todo-list alta-prioridad"></div>
+      </div>
+      <div class="priority-column">
+        <h2><font color="navy">Media Prioridad</font></h2>
+        <div class="js-todo-list media-prioridad"></div>
+      </div>
+      <div class="priority-column">
+        <h2><font color="green">Baja Prioridad</font></h2>
+        <div class="js-todo-list baja-prioridad"></div>
+      </div>
+    </div>
+    <script src="scripts/todolist.js"></script>
+  </body>
+</html>

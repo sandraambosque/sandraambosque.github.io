@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <title>Piedra Papel Tijera</title>
+    <link rel="stylesheet" href="styles/ppt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&family=Ultra&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <p class="titulo">Piedra, Papel o Tijera ¡Saca lo que quieras!</p>
+
+    <button class="button-movimiento js-button-piedra">
+      <img src="styles/images/piedra-emoji.png" class="icono-movimiento">
+    </button>
+
+    <button class="button-movimiento js-button-papel">
+      <img src="styles/images/papel-emoji.png" class="icono-movimiento">
+    </button>
+
+    <button class="button-movimiento js-button-tijera">
+      <img src="styles/images/tijera-emoji.png" class="icono-movimiento">
+    </button>
+
+    <p class="js-resultado resultado"></p>
+    <p class="js-movimientos"></p>
+    <p class="js-puntuacion puntuacion"></p>
+
+    <button onclick="
+    puntuacion.victorias = 0;
+    puntuacion.derrotas = 0;
+    puntuacion.empates = 0;
+    localStorage.removeItem('puntuacion');
+    updatePuntuacionElement();
+    " class="button-reiniciar-puntuacion js-button-reiniciar-puntuacion">Reset</button>
+
+    <button class="auto-play-button" onclick="
+      autoPlay();
+    ">Auto Play</button>
+
+    <script src="scripts/ppt.js"></script>
+  </body>
+</html>
